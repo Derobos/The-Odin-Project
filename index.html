@@ -3,6 +3,8 @@
 <html>
 
 <head>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons " rel="stylesheet ">
     <style>
         /* top nav bar styling */
         
@@ -63,24 +65,51 @@
         /* middle section */
         
         .middle {
-            display: block;
-            justify-content: center;
-            padding-top: 15%;
-            margin-left: 35%;
-            margin-right: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-top: 50px;
+            margin-left: 15%;
+            margin-right: 15%;
             margin-bottom: 50%;
         }
         
+        #google {
+            padding-bottom: 30px;
+            align-self: center;
+        }
+        
         #search {
-            display: block;
-            left: 35%;
-            text-align: center;
             padding-top: 15px;
+            margin: auto;
             border-radius: 16px;
             line-height: 0.5em;
             overflow: hidden;
             resize: none;
-            flex-direction: row;
+        }
+        
+        #search_bar {
+            align-self: center;
+            position: relative;
+        }
+        
+        #search_icon {
+            position: absolute;
+            top: 8px;
+            left: 5px;
+        }
+        
+        #voice_icon {
+            position: absolute;
+            top: 8px;
+            left: 475px;
+        }
+        
+        .middle_buttons {
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
         }
     </style>
 </head>
@@ -124,18 +153,33 @@
         <div id="google">
             <img src="/images/googlelogo_color_272x92dp.png" alt="google image">
         </div>
+        <div id="search_bar">
+            <span id="search_icon" class="material-icons">
+            search
+            </span>
+            <span id="voice_icon" class="material-icons">
+            settings_voice
+            </span>
+            <input type="text" size="60" id="search">
+        </div>
+        <div class="middle_buttons">
+            <button id="google_search">Google Search</button>
+            <button id="lucky">I'm feeling lucky</button>
+        </div>
 
 
-        <textarea id="search" cols="50" rows=".05">
 
-        </textarea>
+
+
+
+
 
 
     </div>
 
 
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons " rel="stylesheet ">
+
 </body>
 
 
